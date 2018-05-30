@@ -9,4 +9,8 @@ public class SilnikBenzynowy extends Silnik {
     public void setPojemnosc(PojemnoscBenzynowego pojemnosc) {
         this.pojemnosc = pojemnosc;
     }
+
+    public PojemnoscBenzynowego getPojemnosc() {
+        return pojemnosc;
+    }
 }

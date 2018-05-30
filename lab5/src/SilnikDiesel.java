@@ -9,4 +9,8 @@ public class SilnikDiesel extends Silnik {
     public void setPojemnosc(PojemnoscDiesela pojemnosc) {
         this.pojemnosc = pojemnosc;
     }
+
+    public PojemnoscDiesela getPojemnosc() {
+        return pojemnosc;
+    }
 }
