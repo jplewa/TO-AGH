@@ -33,6 +33,7 @@ public class Podzespol {
         this.typ = typ;
     }
 
+    @Override
     public String toString() {
         return getTyp().toString();
     }

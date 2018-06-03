@@ -50,6 +50,7 @@ public class Samochod {
 
     // Zmieniliśmy nazwę z pobierzOpis na toString, żeby uniknąć pomyłki z getOpis i setOpis
     // Oprócz tego dodaliśmy metody toString() w poszczególnych częściach samochodu.
+    @Override
     public String toString(){
         StringBuilder opis = new StringBuilder("Skonfigurowany pojazd typu ");
         opis.append(model);
