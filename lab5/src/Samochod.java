@@ -47,6 +47,7 @@ public class Samochod {
         }
         return cena;
     }
+
     // Zmieniliśmy nazwę z pobierzOpis na toString, żeby uniknąć pomyłki z getOpis i setOpis
     // Oprócz tego dodaliśmy metody toString() w poszczególnych częściach samochodu.
     public String toString(){
