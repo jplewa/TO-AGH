@@ -16,6 +16,5 @@ class Main {
         System.out.println(sB);
         sB.dodajPodzespol(new Podzespol(345.67f, "nawigacja!!!", Typ.nawigacja));
         System.out.println(sB);
-
     }
 }

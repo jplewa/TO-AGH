@@ -51,13 +51,13 @@ public class Samochod {
     // Oprócz tego dodaliśmy metody toString() w poszczególnych częściach samochodu.
     public String toString(){
         StringBuilder opis = new StringBuilder("Skonfigurowany pojazd typu ");
-        opis.append(model.toString());
+        opis.append(model);
         opis.append(" z silnikiem ");
-        opis.append(silnik.toString());
+        opis.append(silnik);
         if(!podzespoly.isEmpty()){
             for(Podzespol podzespol : podzespoly){
                 opis.append(", ");
-                opis.append(podzespol.toString());
+                opis.append(podzespol);
             }
         }
         opis.append(". Cena pojazdu: ");
