@@ -1,5 +1,7 @@
 public class SilnikBenzynowy extends Silnik {
+
     private PojemnoscBenzynowego pojemnosc;
+
     public SilnikBenzynowy(float cena,String opis,PojemnoscBenzynowego pojemnosc){
         this.setCena(cena);
         this.setOpis(opis);
@@ -10,7 +12,10 @@ public class SilnikBenzynowy extends Silnik {
         this.pojemnosc = pojemnosc;
     }
 
-    public PojemnoscBenzynowego getPojemnosc() {
-        return pojemnosc;
+    public PojemnoscBenzynowego getPojemnosc(){return this.pojemnosc;}
+
+    @Override
+    public String toString() {
+        return pojemnosc.getWartosc() + " benzynowy";
     }
 }

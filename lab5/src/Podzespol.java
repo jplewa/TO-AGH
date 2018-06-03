@@ -32,4 +32,8 @@ public class Podzespol {
     public void setTyp(Typ typ) {
         this.typ = typ;
     }
+
+    public String toString() {
+        return getTyp().toString();
+    }
 }

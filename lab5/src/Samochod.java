@@ -47,19 +47,22 @@ public class Samochod {
         }
         return cena;
     }
-
-    public String pobierzOpis(){
-        String opis = "Skonfigurowany pojazd typu ";
-        if(model instanceof ModelA) opis = opis + "ModelA";
-        else opis = opis + "ModelB";
-        if(silnik instanceof SilnikDiesel) opis = opis + " z silnikiem " +  ((SilnikDiesel) silnik).getPojemnosc() + " diesel";
-        else opis = opis + " z silnikiem " + ((SilnikBenzynowy) silnik).getPojemnosc() + " benzynowy";
+    // Zmieniliśmy nazwę z pobierzOpis na toString, żeby uniknąć pomyłki z getOpis i setOpis
+    // Oprócz tego dodaliśmy metody toString() w poszczególnych częściach samochodu.
+    public String toString(){
+        StringBuilder opis = new StringBuilder("Skonfigurowany pojazd typu ");
+        opis.append(model.toString());
+        opis.append(" z silnikiem ");
+        opis.append(silnik.toString());
         if(!podzespoly.isEmpty()){
             for(Podzespol podzespol : podzespoly){
-                opis = opis + ", " + podzespol.getTyp();
+                opis.append(", ");
+                opis.append(podzespol.toString());
             }
         }
-        opis = opis + ". Cena pojazdu: " + obliczCene() + "zł.\n";
-        return opis;
+        opis.append(". Cena pojazdu: ");
+        opis.append(String.format("%.2f", obliczCene()));
+        opis.append("zł.");
+        return opis.toString();
     }
 }
