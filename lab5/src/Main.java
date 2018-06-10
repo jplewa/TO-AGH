@@ -1,5 +1,5 @@
 class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Samochod sA = new Samochod(
                 new ModelA(23456.78f, "model"),
                 new SilnikDiesel(23456.78f, "silnik", PojemnoscDiesela.Poj1_6));
@@ -20,6 +20,9 @@ class Main {
         System.out.println(sB);
 
         sB.dodajPodzespol(new Podzespol(345.67f, "nawigacja!!!", Typ.nawigacja));
+        System.out.println(sB);
+
+        sB.dodajPodzespol(new Podzespol(445.65f, "nawigacja!!!!!!", Typ.nawigacja));
         System.out.println(sB);
     }
 }

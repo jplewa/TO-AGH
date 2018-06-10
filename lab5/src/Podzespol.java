@@ -37,4 +37,22 @@ public class Podzespol {
     public String toString() {
         return getTyp().toString();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Podzespol other = (Podzespol) obj;
+        return (this.typ == other.typ);
+    }
+
+    @Override
+    public int hashCode(){
+        return this.typ.ordinal();
+
+    }
 }
